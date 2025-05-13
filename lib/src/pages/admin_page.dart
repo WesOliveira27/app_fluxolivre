@@ -1,3 +1,4 @@
+import 'package:app_fluxolivrep/src/pages/users_page.dart';
 import 'package:flutter/material.dart';
 
 class AdminPage extends StatelessWidget {
@@ -66,7 +67,9 @@ class AdminPage extends StatelessWidget {
         'imageContent': const Icon(Icons.group_add_outlined, size: 60, color: Colors.brown), 
         'imageBgColor': const Color(0xFFFFFFFF), 
         'labelBgColor': Colors.grey.shade600,     
-        'onTap': () => print("Navegar para Usuários"), 
+        'onTap': () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const UsersPage()),
+        ),
       },
       {
         'label': 'Relatório',
